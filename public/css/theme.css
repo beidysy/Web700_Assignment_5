@@ -1,0 +1,84 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+/* App Background */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #ace0f9 0%, #fff1eb 100%);
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Soften the default text color for better readability */
+}
+
+/* Navigation Bar */
+.bg-light {
+  background: linear-gradient(to right, #89f7fe, #66a6ff); /* Soft blue gradient */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* More pronounced shadow for depth */
+  padding: 10px 0; /* Adjust padding */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  margin: 10px; /* Margin around the navbar for space */
+}
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Enhanced text shadow for depth */
+}
+
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #cae0ff; /* Lighter blue on hover for a subtle effect */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* "Primary" Button */
+.btn-primary {
+  background-color: #66a6ff; /* Soft blue */
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 20px; /* More rounded corners for buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #fff; /* Ensure text color is white for contrast */
+}
+
+.btn-primary:hover {
+  background-color: #89f7fe; /* Lighter blue for hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Table cells inside "odd" numbered table rows */
+table.table tr:nth-child(odd) td {
+  background-color: #e3f2fd; /* Lighter shade for a subtle zebra-stripe effect */
+  border-radius: 5px; /* Slightly rounded corners for table cells */
+}
+
+/* All "Heading" elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Darker shade for headings for emphasis */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* All "Anchor" elements (HTML Links) */
+a {
+  color: #66a6ff; /* Harmonize with the primary color scheme */
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #89f7fe; /* Lighter on hover */
+  text-decoration: none; /* No underline on hover for a cleaner look */
+}
+
+/* Fieldset "Legends" */
+legend {
+  padding: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #4a4a4a;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* More pronounced shadow for depth */
+}
