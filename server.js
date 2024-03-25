@@ -4,10 +4,19 @@
 *  of this assignment has been copied manually or electronically from any other source 
 *  (including 3rd party web sites) or distributed to other students.
 * 
-*  Name: Ahmadou Sy Student ID: 138005236 Date: March 24 2024
+*  Name: Ahmadou Sy Student ID: 138005236 Date: March 25 2024
 *
-*  Online (Cycliic) Link: https://good-red-perch-shoe.cyclic.app/
-*
+*  Online (Cycliic) Link: Cyclic is not Working
+This is the Error code
+* We've reached our maximum beta capacity (for now)
+Meanwhile, we've added you to the wait list and saved your spot in line!
+
+Give us some feedback or check up on what we're up to:
+
+Reach out to us on discord 
+Email us at hello@cyclic.sh 
+
+
 ********************************************************************************/ 
 
 
