@@ -118,18 +118,6 @@ module.exports.addStudent = function (studentData) {
 }
 
 
-// module.exports.getCourseById = function(id) {
-//     return new Promise((resolve, reject) => {
-//         const course = dataCollection.courses.find(c => c.courseId == id);
-//         if (course) {
-//             resolve(course);
-//         } else {
-//             reject("query returned 0 results");
-//         }
-//     });
-// };
-
-
 // Define the function getCourseById within the module.exports object
 module.exports.getCourseById = function(id) {
     // This function will provide the "course" object whose course id matches the input using the resolve method of the returned promise. 
