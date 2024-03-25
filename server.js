@@ -306,15 +306,17 @@ app.get('/student/:studentNum', (req, res) => {
 
         
     app.post('/student/update', (req, res) => {
+        // The form should include a hidden input that contains the studentNum
         collegeData.updateStudent(req.body)
             .then(() => {
-                res.redirect('/students');
+                res.redirect('/students'); // Redirect to the list of students after a successful update
             })
             .catch(err => {
                 console.error(err);
-                res.status(500).send("Unable to update student.");
+                res.status(500).send("Unable to update student."); // Display error message on failure
             });
     });
+
 
         
 

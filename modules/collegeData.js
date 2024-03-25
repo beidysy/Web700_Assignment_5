@@ -158,27 +158,29 @@ module.exports.getCourseById = function(id) {
 
 module.exports.updateStudent = function(studentData) {
     return new Promise((resolve, reject) => {
-        console.log('Updating student with data:', studentData);
-        let student = dataCollection.students.find(s => s.studentNum === studentData.studentNum);
+        // Find the student with the matching studentNum
+        let student = dataCollection.students.find(s => s.studentNum == studentData.studentNum);
         if (student) {
-            // Log the found student
-            console.log('Found student:', student);
             // Update the student's properties
-            student.firstName = studentData.firstName;
-            student.lastName = studentData.lastName;
-            student.email = studentData.email;
-            student.addressStreet = studentData.addressStreet;
-            student.addressCity = studentData.addressCity;
-            student.addressProvince = studentData.addressProvince;
-            student.TA = studentData.TA;
-            student.course = studentData.course;
-            student.status = studentData.status;
-            student.isTA = studentData.isTA === "on"; // or however your TA data is transmitted
-
-            console.log('Student after update:', student);
-            resolve(student);
+            student.firstName = studentData.firstName || student.firstName;
+            student.lastName = studentData.lastName || student.lastName;
+            student.email = studentData.email || student.email;
+            student.addressStreet = studentData.addressStreet || student.addressStreet;
+            student.addressCity = studentData.addressCity || student.addressCity;
+            student.addressProvince = studentData.addressProvince || student.addressProvince;
+            student.TA = studentData.TA === "on"; // Check if the checkbox was checked
+            student.course = studentData.course || student.course;
+            student.status = studentData.status || student.status;
+            
+            // Write the updated students array to the students.json file
+            fs.writeFile('./data/students.json', JSON.stringify(dataCollection.students), err => {
+                if (err) {
+                    reject('Unable to save student update.');
+                } else {
+                    resolve();
+                }
+            });
         } else {
-            console.log('Student not found for studentNum:', studentData.studentNum);
             reject('Student not found');
         }
     });
